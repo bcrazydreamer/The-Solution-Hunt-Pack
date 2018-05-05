@@ -2,11 +2,8 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__)) #Added
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT,'static'),
-)
-
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 SECRET_KEY = 'lke^^sesamrjpltl6m0@!j4i5^1m%aaulhf!ra=r2t_7uuhete'
 
