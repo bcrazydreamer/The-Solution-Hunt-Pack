@@ -1,12 +1,6 @@
 from django.contrib import admin
 from django.urls import path
 from mainapp import views as v
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-urlpatterns += patterns('', (
-    r'^static/(?P<path>.*)$',
-    'django.views.static.serve',
-    {'document_root': settings.STATIC_ROOT}
-))
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',v.index),
