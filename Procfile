@@ -1,1 +1,1 @@
-web: gunicorn webserver.wsgi
+web: gunicorn heroku_blog.wsgi --log-file -
