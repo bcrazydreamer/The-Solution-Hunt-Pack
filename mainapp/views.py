@@ -36,7 +36,7 @@ def index(request):
     except:
         client_address = request.META['REMOTE_ADDR']
     print("User with ip connected "+client_address+" at "+ctime())
-    return render(request,'final.html')
+    return render(request,'index.html')
 #-----------------------------------------------------------------------------------------------------------
 def searchbox(request):
     if request.method == 'POST':
