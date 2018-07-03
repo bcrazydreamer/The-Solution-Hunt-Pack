@@ -13,16 +13,25 @@
         <link rel="stylesheet" href="{% static 'dev/a.css' %}">
         <link rel="stylesheet" href="{% static 'dev/rb.css' %}">
         <style type="text/css">
-            footer.footer {
+            footer .footer {
             padding-top: 4rem;
              padding-bottom: 4rem;
             }
-            
+            ::-webkit-scrollbar
+            {
+            width: 0px;
+            background: transparent;
+            }
+            .fixednav{
+                position:fixed;
+                z-index:999;
+                height:100%;
+            }
     </style>
     </head>
     <body>
 <!-- ================================================================================================ -->
-        <div class="wrapper">
+        <div class="wrapper fixednav">
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <h3>Extreme Warrior</h3>
@@ -50,24 +59,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-duplicate"></i>
-                            Tata
-                        </a>
-
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
-                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
-                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
-                            <i class="glyphicon glyphicon-paperclip"></i>
-                            FAQ (Tatainnoverse)
-                        </a>
-                    </li>
-                    <li>
                         <a href="/contact/">
                             <i class="glyphicon glyphicon-send"></i>
                             Contact
@@ -90,7 +81,7 @@
                     </li>
             </nav>
 <!-- ====================================================================================================  -->
-            <div id="content">
+            <div id="content" style="overflow-y: scroll;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
 
@@ -121,28 +112,28 @@
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="{% static 'dev/br3.jpeg' %}" alt="Bharat Rawat" style="border-radius: 50%;">
                 <h5>Bharat Rawat</h5>
-              <p class="font-weight-light mb-0">Full Stack Devloper (Python)</p>
+              <p class="font-weight-light mb-0">Full Stack Devloper (Python,Node,JS)</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="{% static 'dev/ts.jpg' %}" alt="Tushar Sibal" style="border-radius: 50%;">
               <h5>Tushar Sibal</h5>
-              <p class="font-weight-light mb-0">Full Stack Devloper (Python)</p>
+              <p class="font-weight-light mb-0">Full Stack Devloper (Python,React,JS)</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="{% static 'dev/gk.jpg' %}" alt="Gaurav Kochar" style="border-radius: 50%;">
               <h5>Gaurav Kochar</h5>
-              <p class="font-weight-light mb-0">Full Stack Devloper (Javascript)</p>
+              <p class="font-weight-light mb-0">Frontend Devloper (Javascript)</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="testimonial-item mx-auto mb-5 mb-lg-0">
               <img class="img-fluid rounded-circle mb-3" src="{% static 'dev/ab.jpg' %}" alt="Aakash Bansal" style="border-radius: 50%;">
               <h5>Aakash Bansal</h5>
-              <p class="font-weight-light mb-0">Full Stack Devloper (HTML5,CSS3)</p>
+              <p class="font-weight-light mb-0">Frontend Devloper (HTML5,CSS3)</p>
             </div>
           </div>
         </div>

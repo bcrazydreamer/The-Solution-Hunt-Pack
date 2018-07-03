@@ -15,11 +15,22 @@
             padding-top: 4rem;
              padding-bottom: 4rem;
             }
+            ::-webkit-scrollbar
+                {
+                    width: 0px;
+                    background: transparent;
+                }
+            .fixednav{
+                    position:fixed;
+                    z-index:999;
+                    height:100%;
+                }
+    </style>
         </style>
     </head>
     <body>
 <!-- ================================================================================================ -->
-        <div class="wrapper">
+        <div class="wrapper fixednav">
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <h3>Extreme Warrior</h3>
@@ -27,37 +38,23 @@
                 </div>
 
                 <ul class="list-unstyled components">
-                    <li class="active">
+                    <li>
                         <a href="/index/">
                             <i class="glyphicon glyphicon-home"></i>
                             Home
                         </a>
                     </li>
 
-                    <li>
+                    <li  class="active">
                         <a href="/challenge/">
                             <i class="fa fa-code"></i>
                             Challenges
                         </a>
+                    </li>
+                    <li>
                         <a href="/about/">
                             <i class="glyphicon glyphicon-briefcase"></i>
                             About
-                        </a>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-duplicate"></i>
-                            Tata
-                        </a>
-
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
-                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
-                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
-                            <i class="glyphicon glyphicon-paperclip"></i>
-                            FAQ (Tatainnoverse)
                         </a>
                     </li>
                     <li>
@@ -83,7 +80,7 @@
                     </li>
             </nav>
 <!-- ====================================================================================================  -->
-            <div id="content">
+            <div id="content" style="overflow-y: scroll;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
 
@@ -106,7 +103,9 @@
 <!-- ==================================================================================================-->
 <center><h1><b>The Solution Hunt Pack</b></h1></center>
 <center>
-    <img src="{% static 'img/main.gif' %}">
+    <div class="main-content">
+        <img src="{% static 'img/main.gif' %}" style="width: 100%">
+    </div>
 </center>
 <div class="line"></div>
 <center><h2><b>We are "Extreme Warrior"</b></h2></center>

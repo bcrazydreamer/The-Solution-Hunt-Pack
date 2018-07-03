@@ -42,7 +42,6 @@ def searchbox(request):
     if request.method == 'POST':
             searchitem = request.POST['searchget']
             result=searchengine(searchitem)
-            #print(result)
             if len(result)==0:
                 result.append("No any result found")
             return render(request,'search.html',{'search':searchitem,'links':result})
@@ -66,7 +65,7 @@ def challenges(request):
     #print(main)
     return render(request,'challenge.html',{'main':main})
 #------------------------------------------------------------------------------------------------------------
-def problemstatement(request): #proble html
+def problemstatement(request):
     global problem_statement
     problemlink = request.GET.get('title_name')
     start = 'https://www.tatainnoverse.com/'
@@ -150,8 +149,6 @@ def solution(request):
         textTransform='uppercase',
         
     )
-
-#styles[Normal] styles[Bullet]
     
 ##################################################################################################
     if request.method == 'POST':

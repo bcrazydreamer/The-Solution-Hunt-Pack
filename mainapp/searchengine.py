@@ -2,10 +2,9 @@ import requests
 import timeit
 import urllib.request
 import urllib.parse
-import html5lib # pip install html5lib
+import html5lib
 from bs4 import BeautifulSoup
 import re
-#from googlesearch import search
 import csv
 
 
@@ -35,6 +34,7 @@ def searchengine(search):
             anchor = link.find('a')
             link_href = anchor.get('href')
             finalresult.append(link_href)
+        robo=True;
     return finalresult
 #--------------------------------------------------------------------------------------------
 def keywordsresults(arr):

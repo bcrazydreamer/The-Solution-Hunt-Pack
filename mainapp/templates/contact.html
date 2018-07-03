@@ -17,12 +17,21 @@
             padding-top: 4rem;
              padding-bottom: 4rem;
             }
-            
+            ::-webkit-scrollbar
+                {
+                    width: 0px;
+                    background: transparent;
+                }
+            .fixednav{
+                    position:fixed;
+                    z-index:999;
+                    height:100%;
+                }
     </style>
     </head>
     <body>
 <!-- ================================================================================================ -->
-        <div class="wrapper">
+        <div class="wrapper fixednav">
             <nav id="sidebar">
                 <div class="sidebar-header">
                     <h3>Extreme Warrior</h3>
@@ -49,24 +58,6 @@
                             About
                         </a>
                     </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-duplicate"></i>
-                            Tata
-                        </a>
-
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
-                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
-                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
-                            <i class="glyphicon glyphicon-paperclip"></i>
-                            FAQ (Tatainnoverse)
-                        </a>
-                    </li>
                     <li class="active">
                         <a href="/contact/">
                             <i class="glyphicon glyphicon-send"></i>
@@ -90,7 +81,7 @@
                     </li>
             </nav>
 <!-- ====================================================================================================  -->
-            <div id="content">
+            <div id="content" style="overflow-y: scroll;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
 
@@ -113,7 +104,8 @@
 <!-- ==================================================================================================-->
 <div class="main-content">
   <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
             <div class="well well-sm">
                 <form class="form-horizontal" method="post">
                     {% csrf_token %}
@@ -154,50 +146,23 @@
                             </div>
                         </div>
                     </fieldset>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-        <div class="col-md-6">
-            <div class="well well-sm">
-                    <fieldset>
-                        <legend class="text-center header">About Us</legend>
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="panel panel-default">
-                                <div class="panel-body"><center><h3>Extreme Warrior</h3></center></div>
-                        </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="panel-body"><center><h3>Representing</h3><h4>Seth jai parkash mukand lal institute of engineering and technology<br>(Yamunanagar , Haryana)</h4></center></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
+                    <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="panel-body"><center><h3>Contact Info</h3><h4>Email:founder@nepsho.com<br>Call: +91 870-837-2614</h4></center></div>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-md-12 text-center">
-                                <a type="submit" class="btn btn-primary btn-lg" href="/index/">Home</a>
-                            </div>
-                        </div>
-                    </fieldset>
+                         <iframe width="100%" height="300" frameborder="1" src="https://www.bing.com/maps/embed?h=400&w=800&cp=30.0368304098835~77.16331342249786&lvl=15&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no">
+                        </iframe>
                 </form>
             </div>
         </div>
-
-      
+   
  
 
 
 <center>
 <div>
-     <iframe width="800" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=800&cp=30.0368304098835~77.16331342249786&lvl=15&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no">
-     </iframe>
+    
 </div>
 </center>
 
