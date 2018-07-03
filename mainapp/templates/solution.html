@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Extreame Warrior|Solution</title>
+        <title>KeywordExtractor|Solution</title>
         <link rel="icon" href="{% static 'img/icon.ico' %}" type="image/x-icon" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -27,15 +27,20 @@
                 font-weight: bold;
                 font-size: 16px;
             }
+            ::-webkit-scrollbar
+                {
+                    width: 0px;
+                    background: transparent;
+                }
         </style>
     </head>
     <body>
 <!-- ================================================================================================ -->
-        <div class="wrapper">
+        <div class="wrapper" style="position:fixed;z-index:999;height:100%;">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Extreme Warrior</h3>
-                    <strong>EW</strong>
+                    <h3>Keyword Extractor</h3>
+                    <strong>KE</strong>
                 </div>
 
                 <ul class="list-unstyled components">
@@ -56,25 +61,6 @@
                         <a href="/about/">
                             <i class="glyphicon glyphicon-briefcase"></i>
                             About
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-duplicate"></i>
-                            Tata
-                        </a>
-                    </li>
-
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
-                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
-                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
-                            <i class="glyphicon glyphicon-paperclip"></i>
-                            FAQ (Tatainnoverse)
                         </a>
                     </li>
                     <li>
@@ -101,7 +87,7 @@
                     </li>
             </nav>
 <!-- ====================================================================================================  -->
-            <div id="content">
+            <div id="content" style="overflow-y: scroll;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
 
@@ -134,7 +120,7 @@
         {% for keyword,links in main %}
         <div class="container" style="width:90%;">
             <span class="chheading" style="text-transform: uppercase;">&nbsp;{{keyword}}</span>
-            <div class="well" class="wellstyle">
+            <div class="well">
                 {% for i in links %}
                 {% if i == "No any result found" %}
                     <a class="pheading" href="#">{{i}} </a>
@@ -161,7 +147,7 @@
                 <a href="/index/" class="btn btn-default">Home</a>&nbsp;
                 <a href="/challenge/" class="btn btn-default">Challenges</a>
                 <a href="/about/" class="btn btn-default">About</a>
-            <p>&copy; Extreme Warrior 2018. All Rights Reserved.</p>
+            <p>&copy; Nepsho 2018. All Rights Reserved.</p>
             <a href="https://github.com/bcrazydreamer/Extreme_Warrior" class="fa fa-github fa-2x"></a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bcrazydreamer@email.com" class="fa fa-envelope-square fa-2x"></a>
             <br>

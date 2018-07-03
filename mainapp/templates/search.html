@@ -18,15 +18,25 @@
             .form-rounded {
                 border-radius: 5rem;
             }
+            ::-webkit-scrollbar
+                {
+                    width: 0px;
+                    background: transparent;
+                }
+                .fixednav{
+                    position:fixed;
+                    z-index:999;
+                    height:100%;
+                }
         </style>
     </head>
     <body>
 <!-- ================================================================================================ -->
-        <div class="wrapper">
+        <div class="wrapper fixednav">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Extreme Warrior</h3>
-                    <strong>EW</strong>
+                    <h3>Keyword Extractor</h3>
+                    <strong>KE</strong>
                 </div>
 
                 <ul class="list-unstyled components">
@@ -46,23 +56,8 @@
                             <i class="glyphicon glyphicon-briefcase"></i>
                             About
                         </a>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-duplicate"></i>
-                            Tata
-                        </a>
+                    </li>
 
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li><a href="https://www.tatainnoverse.com/">Tatainnoverse</a></li>
-                            <li><a href="http://www.tatacrucible.com/">Tatacrucible</a></li>
-                            <li><a href="https://www.tatainnoverse.com/tatacruciblehackathon/challenge.php?id=90">The Solution Hunt Pack</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="https://www.tatainnoverse.com/page.php?page=MTMw">
-                            <i class="glyphicon glyphicon-paperclip"></i>
-                            FAQ (Tatainnoverse)
-                        </a>
-                    </li>
                     <li>
                         <a href="/contact/">
                             <i class="glyphicon glyphicon-send"></i>
@@ -86,7 +81,7 @@
                     </li>
             </nav>
 <!-- ====================================================================================================  -->
-            <div id="content">
+            <div id="content" style="overflow-y: scroll;">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
 
@@ -145,7 +140,7 @@
                 <a href="/index/" class="btn btn-default">Home</a>&nbsp;
                 <a href="/challenge/" class="btn btn-default">Challenges</a>
                 <a href="/about/" class="btn btn-default">About</a>
-            <p>&copy; Extreme Warrior 2018. All Rights Reserved.</p>
+            <p>&copy; Nepsho 2018. All Rights Reserved.</p>
             <a href="https://github.com/bcrazydreamer/Extreme_Warrior" class="fa fa-github fa-2x"></a>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=bcrazydreamer@email.com" class="fa fa-envelope-square fa-2x"></a>
             <br>
