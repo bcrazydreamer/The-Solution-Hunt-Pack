@@ -10,7 +10,7 @@ gunicorn==19.7.1
 html5lib==1.0.1
 httplib2==0.10.3
 lxml==4.1.1
-Pillow==4.3.0
+Pillow==6.2.0
 pipenv==8.3.2
 reportlab==3.4.0
 requests==2.18.4
